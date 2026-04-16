@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atrapar Limones</title>
+  <link rel="stylesheet" href="limones.css">
+</head>
+<body onload="iniciar()">
+ 
+  <h1>Atrapar Limones</h1>
+  <p>Si del cielo te caen limones...</p>
+  <p><strong>Autor: Sonicse</strong></p>
+  <canvas id="areaJuego" width="500" height="420"></canvas>
+  <div class="panel">
+    <span>Puntaje: <span id="puntos">0</span></span>
+    <span>Vidas: <span id="vidas">3</span></span>
+  </div>
+  <div class="controles">
+    <button onclick="moverIzquierda()">⬅ Izquierda</button>
+    <button onclick="moverDerecha()">Derecha ➡</button>
+    <button onclick="reiniciar()">Reiniciar</button>
+  </div>
+ 
+  <p id="mensaje"></p>
+ 
+  <script src="limones.js"></script>
+ 
+</body>
+</html>
