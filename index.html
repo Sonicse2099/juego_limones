@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Atrapar Limones</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍋 Atrapar Limones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="limones.css">
 </head>
 <body onload="iniciar()">
  
-  <h1>Atrapar Limones</h1>
-  <p>Si del cielo te caen limones...</p>
-  <p><strong>Autor: Sonicse</strong></p>
-  <canvas id="areaJuego" width="500" height="420"></canvas>
-  <div class="panel">
-    <span>Puntaje: <span id="puntos">0</span></span>
-    <span>Vidas: <span id="vidas">3</span></span>
-  </div>
-  <div class="controles">
-    <button onclick="moverIzquierda()">⬅ Izquierda</button>
-    <button onclick="moverDerecha()">Derecha ➡</button>
-    <button onclick="reiniciar()">Reiniciar</button>
+  <div class="bg-glow"></div>
+  <div class="floating-lemons" aria-hidden="true">
+    <span>🍋</span><span>🍋</span><span>🍋</span>
+    <span>🍋</span><span>🍋</span><span>🍋</span>
   </div>
  
-  <p id="mensaje"></p>
+  <div class="game-wrapper">
+ 
+    <header class="game-header">
+      <div class="deco-line"></div>
+      <h1>🍋 Atrapar Limones</h1>
+      <p class="subtitle">Si del cielo te caen limones...</p>
+      <p class="autor">✦ Sonicse ✦</p>
+      <div class="deco-line"></div>
+    </header>
+ 
+    <div class="canvas-container">
+      <div class="canvas-glow"></div>
+      <canvas id="areaJuego" width="500" height="420"></canvas>
+    </div>
+ 
+    <div class="panel">
+      <div class="stat-box">
+        <span class="stat-label">PUNTAJE</span>
+        <span class="stat-value" id="puntos">0</span>
+      </div>
+      <div class="stat-divider">⚡</div>
+      <div class="stat-box">
+        <span class="stat-label">VIDAS</span>
+        <span class="stat-value lives" id="vidas">❤️❤️❤️</span>
+      </div>
+    </div>
+ 
+    <div class="controles">
+      <button class="btn-dir btn-left" onclick="moverIzquierda()">⬅ Izquierda</button>
+      <button class="btn-restart" onclick="reiniciar()">↺ Reiniciar</button>
+      <button class="btn-dir btn-right" onclick="moverDerecha()">Derecha ➡</button>
+    </div>
+ 
+    <p id="mensaje"></p>
+ 
+  </div>
  
   <script src="limones.js"></script>
- 
 </body>
 </html>
